@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body{
+            padding:20px;
+        }
+        .dialog-size{
+            width: 500px;
+        }
+        .one-line{
+            display:inline-block
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <form name = "form" method="POST" action="{% url 'result' %}">
+
+        {% csrf_token %}
+
+        <div class="form-group">
+          <label class="one-line" for="year">Year</label>
+          <input type="year" class="form-control dialog-size one-line" id="year" name="year" placeholder="Enter year" required>
+        </div>
+        <div class="form-group">
+          <label class="one-line" for="showroom-price">Showroom price (in lakhs) </label>
+          <input type="showroom-price" class="form-control dialog-size one-line" id="showroom-price"  name="showroom-price"  placeholder="Enter showroom price" required>
+        </div>
+        <div class="form-group">
+          <label class="one-line" for="mileage">Mileage</label>
+          <input type="mileage" class="form-control dialog-size one-line" id="mileage" name="mileage" placeholder="Enter mileage" required>
+        </div>
+        <div class="form-group">
+          <label class="one-line" for="prev-owners">Number of previous owners</label>
+          <input type="prev-owners" class="form-control dialog-size one-line" id="prev-owners" name="prev-owners"  placeholder="Enter number of previous owners" required>
+        </div>
+        <div class="form-group">
+          <label class="one-line">Fuel Type</label>
+          <select class="one-line" name="fuel">
+            <option name="petrol">petrol</option>
+            <option name="diesel">diesel</option>
+            <option name="cng">cng</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="one-line">Dealer or Individual</label>
+          <select class="one-line" name='seller-type'>
+            <option name="Dealer">Dealer</option>
+            <option name="Individual">Individual</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="one-line">Transmission</label>
+          <select class="one-line" name='transmission'>
+            <option name="Manual">Manual</option>
+            <option name="Automatic">Automatic</option>
+          </select>
+        </div>
+        <input type="submit" name="" value="submit">
+      </form>
+</body>
+</html>

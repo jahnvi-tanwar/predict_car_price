@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Showroom Price :  {{list.0}}</div>
+    <div>Mileage :  {{list.1}}</div>
+    <div>Number of previous owners :  {{list.2}}</div>
+    <div>Years used :  {{list.3}}</div>
+    {%if list.4 == 0 and list.5 == 1 %}
+        <div>Fuel : petrol</div>
+    {%elif list.4 == 1 and list.5 == 0 %}
+        <div>Fuel : diesel</div>
+    {%else%}
+        <div>Fuel : CNG</div>
+    {%endif%}
+
+    {%if list.6 == 1%}
+        <div>Transmission-mode : Manual</div>
+    {%elif list.6 == 0%}
+        <div>Transmission-mode : Automatic</div>
+    {%endif%}
+
+    <h3>Price of your car will be {{ans.0}} lakh Rs</h3>
+
+
+</body>
+</html>
