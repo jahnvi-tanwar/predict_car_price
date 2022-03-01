@@ -34,7 +34,8 @@ SECRET_KEY = 'django-insecure-nuc*k(t!b!1byis&@m-#xrxt11u3boh%3)z!i@rmvorbjkjgqa
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["127.0.0.1","car-price-prediction-r.herokuapp.com"]
+ALLOWED_HOSTS = ['https://carpricepred2023.herokuapp.com',
+'localhost','127.0.0.1']
 
 
 # Application definition
